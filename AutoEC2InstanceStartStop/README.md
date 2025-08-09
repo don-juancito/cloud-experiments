@@ -1,4 +1,4 @@
-# Autpomatic EC2 Instance Start/Stop
+# Automatic EC2 Instance Start/Stop
 
 ![project workflow image](./StartStopInstanceManager.png)
 
