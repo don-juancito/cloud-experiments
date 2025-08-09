@@ -19,13 +19,12 @@ Each experiment is designed as a self-contained learning module with its own REA
 
 > **Note**: I aim to add new labs regularly, so check back often for fresh content!
 
-- **InventoryStockAlarm**: Use EventBridge scheduler rules, Lambda functions, and SNS topics to get notified when a product becomes available.
-
-- **ServerlessPdfContentModerationPipeline**: Leverage S3 event notifications, Lambda functions, and AWS Rekognition to create moderation labels for individual PDF pages and detect potentially harmful content.
-
-- **ServerlessPdfProcessingPipeline**: Transform PDF files into different formats (PNG images and plain text) using S3 event notifications, Lambda functions, and AWS Textract.
-
-- **ServerlessPdfFullPipeline**: A combination of the previous two workflows that demonstrates the traditional SNS Fan-Out pattern by using SNS topics to distribute events across multiple processing pipelines.
+- **APIGatewayWithLambdaAuthorization**: Use Lambda authorizers for adding a flexible authorization mechanism to an already-existing API Gateway REST API
+- **AutoEC2InstanceStartStop**: Use EventBridge scheduler rules, Lambda functions, and SNS topics to start and stop EC2 instances based on a schedule
+- **InventoryStockAlarm**: Use EventBridge scheduler rules, Lambda functions, and SNS topics to get notified when a product becomes available
+- **ServerlessPdfContentModerationPipeline**: Leverage S3 event notifications, Lambda functions, and AWS Rekognition to create moderation labels for individual PDF pages and detect potentially harmful content
+- **ServerlessPdfProcessingPipeline**: Transform PDF files into different formats (PNG images and plain text) using S3 event notifications, Lambda functions, and AWS Textract
+- **ServerlessPdfFullPipeline**: A combination of the previous two workflows that demonstrates the traditional SNS Fan-Out pattern by using SNS topics to distribute events across multiple processing pipelines
 
 ## Learning Tips
 
