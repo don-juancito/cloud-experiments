@@ -14,10 +14,10 @@ def handler(event:, context:)
   case action
   when 'start'
     EC2.instances(filters: [tag_filter, { name: 'instance-state-name', values: ['stopped'] }])
-       .each { |instance| instance.start }
+       .each(&:start)
   when 'stop'
     EC2.instances(filters: [tag_filter, { name: 'instance-state-name', values: ['running'] }])
-       .each { |instance| instance.stop }
+       .each(&:stop)
   end
 
 end
