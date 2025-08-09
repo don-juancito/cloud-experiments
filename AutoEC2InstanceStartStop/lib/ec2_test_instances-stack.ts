@@ -13,7 +13,6 @@ export class Ec2TestInstancesStack extends cdk.Stack {
     constructor(scope: Construct, id: string, props: Ec2TestInstancesStackProps) {
         super(scope, id, props);
 
-        // Use the default VPC to avoid creating new networking resources.
         const defaultVpc = ec2.Vpc.fromLookup(this, 'DefaultVpc', {isDefault: true});
 
         this.createTestInstances(props.devInstanceNumber, 'development', defaultVpc);
