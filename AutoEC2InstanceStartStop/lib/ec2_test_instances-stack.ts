@@ -24,7 +24,7 @@ export class Ec2TestInstancesStack extends cdk.Stack {
 
     createTestInstances(numberOfInstances: number, environment: string) {
         for (let index = 0; index < numberOfInstances; index++) {
-            const instance = new ec2.Instance(this, `Instance-${environment}-${index + 1}`, {
+            const instance = new ec2.Instance(this, `${environment}-${index + 1}`, {
                 instanceType: ec2.InstanceType.of(ec2.InstanceClass.T2, ec2.InstanceSize.MICRO),
                 machineImage: ec2.MachineImage.latestAmazonLinux2023(),
                 vpc: this.vpc,

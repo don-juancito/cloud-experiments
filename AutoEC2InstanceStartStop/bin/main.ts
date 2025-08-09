@@ -11,7 +11,7 @@ new Ec2TestInstancesStack(app, 'testInstances', {
         account: process.env.CDK_DEFAULT_ACCOUNT,
         region: process.env.CDK_DEFAULT_REGION,
     },
-    devInstanceNumber: 4,
-    stagingInstanceNumber: 3,
+    devInstanceNumber: 2,
+    stagingInstanceNumber: 2,
     prodInstanceNumber: 2,
 });
