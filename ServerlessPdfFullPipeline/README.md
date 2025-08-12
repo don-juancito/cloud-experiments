@@ -4,4 +4,4 @@
 
 ---
 
-[The walkthrough for the project can be found ... well nowhere, I haven't written it yet. But you can still find some cool articles here](https://brainstobytes.com)
+[The walkthrough for the project can be found here](https://brainstobytes.com/serverless-pdf-full-pipeline)
