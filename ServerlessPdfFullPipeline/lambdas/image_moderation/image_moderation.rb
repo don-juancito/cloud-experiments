@@ -8,8 +8,10 @@ REKOGNITION = Aws::Rekognition::Client.new
 DYNAMO = Aws::DynamoDB::Client.new
 
 def handler(event:, context:)
-  bucket = event['Records'][0]['s3']['bucket']['name']
-  key = CGI.unescape(event['Records'][0]['s3']['object']['key'])
+  s3_event = JSON.parse(event['Records'][0]['Sns']['Message'])
+
+  bucket = s3_event['Records'][0]['s3']['bucket']['name']
+  key = CGI.unescape(s3_event['Records'][0]['s3']['object']['key'])
   table_name = ENV['DYNAMO_TABLE_NAME']
   minimum_confidence = ENV['MIN_CONFIDENCE'].to_f
 

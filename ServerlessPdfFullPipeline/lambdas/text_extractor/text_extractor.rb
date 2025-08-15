@@ -8,8 +8,10 @@ TEXTRACT = Aws::Textract::Client.new
 S3 = Aws::S3::Client.new
 
 def handler(event:, context:)
-  bucket = event['Records'][0]['s3']['bucket']['name']
-  key = CGI.unescape(event['Records'][0]['s3']['object']['key'])
+  s3_event = JSON.parse(event['Records'][0]['Sns']['Message'])
+
+  bucket = s3_event['Records'][0]['s3']['bucket']['name']
+  key = CGI.unescape(s3_event['Records'][0]['s3']['object']['key'])
   text_bucket_name = ENV['TEXT_BUCKET_NAME']
 
   response = TEXTRACT.detect_document_text(
