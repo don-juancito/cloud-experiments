@@ -41,7 +41,7 @@ export class ServerlessPdfFullPipelineStack extends cdk.Stack {
         name: "filepage",
         type: dynamo.AttributeType.STRING,
       },
-      tableName: "pageModerationLabels",
+      tableName: `${this.stackName}-pageModerationLabels`,
       removalPolicy: cdk.RemovalPolicy.DESTROY,
     });
 
@@ -94,7 +94,7 @@ export class ServerlessPdfFullPipelineStack extends cdk.Stack {
 
     // Create an SNS topic and use event fanout
     const snsTopic = new sns.Topic(this, "imageBucketObjectCreatedTopic", {
-      topicName: "imageBucketObjectCreatedTopic",
+      topicName: `${this.stackName}-imageBucketObjectCreatedTopic`,
       displayName:
         "SNS Topic for doing fan-out on the object_created events from the image S3 bucket",
     });
