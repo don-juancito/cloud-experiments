@@ -30,6 +30,7 @@ except psycopg2.Error as e:
     logger.error(e)
     sys.exit(1)
 
+
 def handler(event, context):
     with connection.cursor(cursor_factory=RealDictCursor) as cursor:
         try:
@@ -43,6 +44,7 @@ def handler(event, context):
             logger.error(err)
             return {'statusCode': 500, 'body': "Error, check logs"}
 
+
 def setup_db():
     with connection.cursor(cursor_factory=RealDictCursor) as cursor:
         try:
@@ -54,23 +56,24 @@ def setup_db():
             table_exists = cursor.fetchone()
 
             if not table_exists:
-                    table_create_query = """CREATE TABLE poke_data (
+                table_create_query = """CREATE TABLE poke_data (
                                         dex_number INT,
                                         name VARCHAR(255),
                                         type VARCHAR(255)
                                         );
                     """
-                    cursor.execute(table_create_query)
+                cursor.execute(table_create_query)
 
-                    seed_query = """INSERT INTO poke_data
+                seed_query = """INSERT INTO poke_data
                                 values
                                 (1, 'Bulbasaur', 'Grass/Poison'),
                                 (2, 'Ivysaur', 'Grass/Poison'),
                                 (3, 'Venusaur', 'Grass/Poison'),
                                 (4, 'Charmander', 'Fire');
                     """
-                    cursor.execute(seed_query)
+                cursor.execute(seed_query)
         except psycopg2.Error as err:
             logger.error(err)
+
 
 setup_db()

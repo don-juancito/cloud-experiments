@@ -20,6 +20,7 @@ Each experiment is designed as a self-contained learning module with its own REA
 > **Note**: I aim to add new labs regularly, so check back often for fresh content!
 
 - **APIGatewayWithLambdaAuthorization**: Use Lambda authorizers for adding a flexible authorization mechanism to an already-existing API Gateway REST API
+- **APIGatewayWithProxiedRDS**: Use an RDS Proxy to securely manage connections from multiple Lambda functions to your RDS instance.
 - **AutoEC2InstanceStartStop**: Use EventBridge scheduler rules, Lambda functions, and the AWS SDK to save money by starting and stopping EC2 instances based on a schedule
 - **InventoryStockAlarm**: Use EventBridge scheduler rules, Lambda functions, and SNS topics to receive notifications when a product becomes available
 - **ServerlessPdfContentModerationPipeline**: Leverage S3 event notifications, Lambda functions, and AWS Rekognition to generate moderation labels for individual PDF pages and detect potentially harmful content
