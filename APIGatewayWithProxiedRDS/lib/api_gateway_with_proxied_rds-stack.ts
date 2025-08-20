@@ -53,10 +53,7 @@ export class ApiGatewayWithProxiedRdsStack extends cdk.Stack {
       }
     );
 
-    databaseSecurityGroup.addIngressRule(
-      proxySecurityGroup,
-      ec2.Port.tcp(5432)
-    );
+    databaseSecurityGroup.addIngressRule(proxySecurityGroup, ec2.Port.tcp(5432));
     proxySecurityGroup.addIngressRule(lambdaSecurityGroup, ec2.Port.tcp(5432));
 
     const dbAuthSecret = new secrets.Secret(this, "dbAuthSecret", {
