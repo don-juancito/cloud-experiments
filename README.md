@@ -23,6 +23,8 @@ Each experiment is designed as a self-contained learning module with its own REA
 - **APIGatewayWithProxiedRDS**: Use an RDS Proxy to securely manage connections from multiple Lambda functions to your RDS instance.
 - **AutoEC2InstanceStartStop**: Use EventBridge scheduler rules, Lambda functions, and the AWS SDK to save money by starting and stopping EC2 instances based on a schedule
 - **InventoryStockAlarm**: Use EventBridge scheduler rules, Lambda functions, and SNS topics to receive notifications when a product becomes available
+- **LoadBalancedECSFargateFromPattern**: Implements a load-balaced ECS Fargate service using the AWS CDK Patterns library
+- **LoadBalancedECSFargateFromScratch**: Implements a load-balanced ECS Fargate service from scratch using standard constructs from the AWS CDK
 - **ServerlessPdfContentModerationPipeline**: Leverage S3 event notifications, Lambda functions, and AWS Rekognition to generate moderation labels for individual PDF pages and detect potentially harmful content
 - **ServerlessPdfProcessingPipeline**: Transform PDF files into different formats (PNG images and plain text) using S3 event notifications, Lambda functions, and AWS Textract
 - **ServerlessPdfFullPipeline**: A combination of the previous two workflows that demonstrates the traditional SNS Fan-Out pattern by using SNS topics to distribute events across multiple processing pipelines

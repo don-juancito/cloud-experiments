@@ -1,6 +1,5 @@
 import * as cdk from 'aws-cdk-lib';
 import {Construct} from 'constructs';
-import {aws_ec2 as ec2} from 'aws-cdk-lib';
 import {aws_ecs as ecs} from "aws-cdk-lib";
 import {aws_ecs_patterns as ecs_patterns} from "aws-cdk-lib";
 
