@@ -10,10 +10,9 @@ export class LoadBalancedEcsFargateFromScratchStack extends cdk.Stack {
 
     const vpc = new ec2.Vpc(this, "VPC", {
       ipAddresses: ec2.IpAddresses.cidr("10.0.0.0/26"),
-      natGateways: 0,
       maxAzs: 2,
       subnetConfiguration: [
-        {cidrMask: 28, name: "private-subnet", subnetType: ec2.SubnetType.PRIVATE_ISOLATED},
+        {cidrMask: 28, name: "private-subnet", subnetType: ec2.SubnetType.PRIVATE_WITH_EGRESS},
         {cidrMask: 28, name: "public-subnet", subnetType: ec2.SubnetType.PUBLIC},
       ],
     });
@@ -40,8 +39,8 @@ export class LoadBalancedEcsFargateFromScratchStack extends cdk.Stack {
       cluster,
       taskDefinition,
       desiredCount: 2,
-      assignPublicIp: true,
-      minHealthyPercent: 100
+      minHealthyPercent: 100,
+      vpcSubnets: { subnetType: ec2.SubnetType.PRIVATE_WITH_EGRESS },
     });
 
     const appLB = new elbv2.ApplicationLoadBalancer(this, 'LB', {
