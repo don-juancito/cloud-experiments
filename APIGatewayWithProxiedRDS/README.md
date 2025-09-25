@@ -1,4 +1,4 @@
-# Inventory Stock Alarm
+# API Gateway with Proxied RDS
 
 ![project workflow image](./APIGatewayWithProxiedRDSDiagram.png)
 
