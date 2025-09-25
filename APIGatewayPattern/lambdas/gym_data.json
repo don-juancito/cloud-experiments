@@ -1,0 +1,50 @@
+{
+  "1": {
+    "Name": "Pewter City Gym",
+    "Leader": "Brock",
+    "Type": "Rock",
+    "Reward": "Boulder Badge"
+  },
+  "2": {
+    "Name": "The Cerulean Gym",
+    "Leader": "Misty",
+    "Type": "Water",
+    "Reward": "Cascade Badge"
+  },
+  "3": {
+    "Name": "Vermilion Gym",
+    "Leader": "Lt. Surge",
+    "Type": "Electric",
+    "Reward": "Thunder Badge"
+  },
+  "4": {
+    "Name": "Celadon Gym",
+    "Leader": "Erika",
+    "Type": "Grass",
+    "Reward": "Rainbow Badge"
+  },
+  "5": {
+    "Name": "Fuchsia City Gym",
+    "Leader": "Koga",
+    "Type": "Poison",
+    "Reward": "Soul Badge"
+  },
+  "6": {
+    "Name": "Saffron City Gym",
+    "Leader": "Sabrina",
+    "Type": "Psychic",
+    "Reward": "Marsh Badge"
+  },
+  "7": {
+    "Name": "Cinnabar Island Gym.",
+    "Leader": "Blaine",
+    "Type": "Fire",
+    "Reward": "Volcano Badge"
+  },
+  "8": {
+    "Name": "Viridian City Gym",
+    "Leader": "Giovanni",
+    "Type": "Groun",
+    "Reward": "Earth Badge"
+  }
+}
