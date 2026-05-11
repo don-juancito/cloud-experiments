@@ -23,6 +23,7 @@ Each experiment is designed as a self-contained learning module with its own REA
 - **APIGatewayWithLambdaAuthorization**: Use Lambda authorizers for adding a flexible authorization mechanism to an already-existing API Gateway REST API
 - **APIGatewayWithProxiedRDS**: Use an RDS Proxy to securely manage connections from multiple Lambda functions to your RDS instance.
 - **AutoEC2InstanceStartStop**: Use EventBridge scheduler rules, Lambda functions, and the AWS SDK to save money by starting and stopping EC2 instances based on a schedule
+- **BedrockStoryTellerAPI**: Use a foundational model from bedrock to build a simple API that creates 3-paragraph stories for any character
 - **InventoryStockAlarm**: Use EventBridge scheduler rules, Lambda functions, and SNS topics to receive notifications when a product becomes available
 - **LoadBalancedECSFargateFromPattern**: Implements a load-balaced ECS Fargate service using the AWS CDK ECS Patterns module
 - **LoadBalancedECSFargateFromScratch**: Implements a load-balanced ECS Fargate service from scratch using standard constructs
